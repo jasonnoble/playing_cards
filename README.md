@@ -3,7 +3,8 @@
 1. Fork this repo
 2. Clone your fork to your local machine
 3. cd playing_cards
-4. `bundle`
+4. Add my repo as an upstream (`git remote add upstream git@github.com:jasonnoble/playing_cards.git`)
+5. `bundle`
 
 Open the editor of your choice.
 
@@ -28,6 +29,13 @@ $ git branch
 $
 ```
 
+## Overall Goals
+
+1. Get comfortable with RSpec TDD process
+2. Continue practicing Ruby
+3. Get comfortable with staging and committing changes via `git`
+4. You should commit at least at the end of each iteration. The more you commit, the better.
+
 ## Running Guard
 
 This repo has a number of automated tasks handled by the Guard gem. After creating your topic branch, run the following:
@@ -50,8 +58,8 @@ A `PlayingCard` represents a playing card
 
 Attributes:
 
-* suit (`diamond`, `heart`, `spade`, `club`)
-* value (1,2,3,4,5,6,7,8,9,J,Q,K,A)
+* suit ('diamond', 'heart', 'spade', 'club')
+* value ('1','2','3','4','5','6','7','8','9','J','Q','K','A')
 
 Methods:
 
@@ -59,8 +67,7 @@ Methods:
 * value (Returns the value of the card)
 
 Steps:
-1. Create a spec directory
-2. Create a spec/playing_card_spec.rb file
+1. Create a spec/playing_card_spec.rb file
    1. Require the spec_helper
    2. Require './lib/playing_card'
    3. RSpec.describe PlayingCard
@@ -111,7 +118,7 @@ A `Player` represents a player in a card game.
 Attributes:
 
 * Name
-* win_cards
+* won_cards
   * The cards that the player has won
 
 Methods:
@@ -124,7 +131,7 @@ Methods:
   * The card passed in is the high card (may be nil)
   * Plays a card from the player's hand
 * win(cards)
-   * Adds the cards to the player's `win_cards`
+   * Adds the cards to the player's `won_cards`
    
 Iteration Rubric:
 
@@ -158,3 +165,18 @@ Iteration Rubric:
 * Rubocop returns no errors
 * All tests are green
 * Code coverage shows 100% test coverage
+
+## Compare your results
+
+After you've committed all your results via Git, you can check your work by running the following:
+
+```
+$ git diff upstream/complete
+```
+
+## Do it again!
+
+```
+git checkout main
+git checkout -b attempt_2
+```
