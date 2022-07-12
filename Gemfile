@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.1.2'
+ruby '2.6.8'
 
 gem 'guard-bundler'
 gem 'guard-rspec'
